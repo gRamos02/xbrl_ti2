@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance">
+    <!-- Información de la empresa -->
+    <context id="Context_2024">
+        <entity>
+            <identifier scheme="http://www.example.com">Company123</identifier>
+        </entity>
+        <period>
+            <instant>2024-12-31</instant>
+        </period>
+    </context>
+
+    <!-- Ingreso neto -->
+    <us-gaap:Revenues contextRef="Context_2024" unitRef="USD">1500000</us-gaap:Revenues>
+
+    <!-- Total de activos -->
+    <us-gaap:Assets contextRef="Context_2024" unitRef="USD">5000000</us-gaap:Assets>
+
+    <!-- Unidades de medida -->
+    <unit id="USD">
+        <measure>iso4217:USD</measure>
+    </unit>
+</xbrl>
