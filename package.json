@@ -40,6 +40,7 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "1.6.12",
+    "@sveltejs/adapter-vercel": "^5.5.0",
     "highlight.js": "11.10.0",
     "xbrl-parser": "^1.2.4"
   }
