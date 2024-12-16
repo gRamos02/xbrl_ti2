@@ -21,7 +21,9 @@
     "@tailwindcss/typography": "0.5.15",
     "@types/eslint": "^9.6.0",
     "@types/node": "22.8.7",
+    "@types/pg": "^8.11.10",
     "autoprefixer": "10.4.20",
+    "drizzle-kit": "^0.30.0",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.36.0",
@@ -41,7 +43,11 @@
   "dependencies": {
     "@floating-ui/dom": "1.6.12",
     "@sveltejs/adapter-vercel": "^5.5.0",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.0",
     "highlight.js": "11.10.0",
-    "xbrl-parser": "^1.2.4"
+    "pg": "^8.13.1",
+    "xbrl-parser": "^1.2.4",
+    "xmlbuilder2": "^3.1.1"
   }
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance" xmlns:us-gaap="http://fasb.org/us-gaap/2024-01-31" xmlns:iso4217="http://www.xbrl.org/2003/iso4217">
+    <!-- Contexto del reporte -->
+    <context id="Context_2024">
+        <entity>
+            <identifier scheme="http://www.example.com">Company123</identifier>
+        </entity>
+        <period>
+            <startDate>2024-01-01</startDate>
+            <endDate>2024-12-31</endDate>
+        </period>
+    </context>
+
+    <!-- Datos Financieros -->
+    <us-gaap:Revenues contextRef="Context_2024" unitRef="MXN">30000000</us-gaap:Revenues>
+    <us-gaap:Expenses contextRef="Context_2024" unitRef="MXN">24000000</us-gaap:Expenses>
+    <us-gaap:NetIncome contextRef="Context_2024" unitRef="MXN">6000000</us-gaap:NetIncome>
+    <us-gaap:Assets contextRef="Context_2024" unitRef="MXN">100000000</us-gaap:Assets>
+    <us-gaap:Liabilities contextRef="Context_2024" unitRef="MXN">40000000</us-gaap:Liabilities>
+    <us-gaap:Equity contextRef="Context_2024" unitRef="MXN">60000000</us-gaap:Equity>
+    <us-gaap:CashAndCashEquivalents contextRef="Context_2024" unitRef="MXN">10000000</us-gaap:CashAndCashEquivalents>
+    <us-gaap:AccountsReceivable contextRef="Context_2024" unitRef="MXN">15000000</us-gaap:AccountsReceivable>
+    <us-gaap:Inventory contextRef="Context_2024" unitRef="MXN">2000000</us-gaap:Inventory>
+    <us-gaap:AccountsPayable contextRef="Context_2024" unitRef="MXN">12000000</us-gaap:AccountsPayable>
+    <us-gaap:LongTermDebt contextRef="Context_2024" unitRef="MXN">28000000</us-gaap:LongTermDebt>
+    <us-gaap:RetainedEarnings contextRef="Context_2024" unitRef="MXN">32000000</us-gaap:RetainedEarnings>
+
+    <!-- Unidades de Medida -->
+    <unit id="MXN">
+        <measure>iso4217:MXN</measure>
+    </unit>
+</xbrl>

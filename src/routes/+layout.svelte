@@ -22,8 +22,17 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
-</script>
 
+	import { initializeStores, Toast, Modal } from '@skeletonlabs/skeleton';
+	import LoadingModal from '$lib/components/LoadingModal.svelte';
+	import { browser } from '$app/environment';
+	import { navigating } from '$app/stores';
+	import { isLoading } from '$lib/stores/loadingStore';
+	initializeStores();
+</script>
+<LoadingModal show={$isLoading}/>
+<Modal />
+<Toast/>
 <!-- App Shell -->
 <AppShell>
 	<svelte:fragment slot="header">
@@ -38,11 +47,11 @@
 				<!-- Lista de enlaces de navegación -->
 				<nav class="flex space-x-4">
 					<a href="/" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Inicio</a>
-					<a href="/lectura" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Lectura de Archivos</a>
-					<a href="#generacion" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Generación de Archivos</a>
-					<a href="/visualizacion" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Visualización de Datos</a>
-					<a href="#ejemplos" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Ejemplos y Tutoriales</a>
-					<a href="#contacto" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Contacto</a>
+					<a href="/validacion" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Validar</a>
+					<a href="/generacion" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Generación de Archivos</a>
+					<a href="/ver" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Registros</a>
+					<!-- <a href="/ejemplos" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Ejemplos y Tutoriales</a> -->
+					<a href="/contacto" class="text-lg text-white-700 hover:text-blue-200 btn variant-filled">Acerca de</a>
 				</nav>
 			</svelte:fragment>
 		</AppBar>
